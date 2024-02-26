@@ -6,6 +6,19 @@
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
 </head>
 <body>
-    
+    <script>
+        // const reactDOM = React.createElement('h1', null, 'Hello World');
+        // console.log(reactDOM);
+
+        const ul = React.createElement('ul', {id: 'list', className: 'list', style: {color: 'red'}}, 
+            React.createElement('li', {style: 'color: red'}, 'Monday'),
+            React.createElement('li', null, 'Tuesday'),
+            React.createElement('li', null, 'Wednesday'),
+            React.createElement('li', null, 'Thursday'),
+            React.createElement('li', null, 'Friday'),
+            React.createElement('li', null, 'Saturday'),
+            React.createElement('li', null, 'Sunday')
+        );
+    </script>
 </body>
 </html>
