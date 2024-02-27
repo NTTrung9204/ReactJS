@@ -1,24 +1,140 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
     <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
+
 <body>
+    <div class="" id="root"></div>
     <script>
         // const reactDOM = React.createElement('h1', null, 'Hello World');
         // console.log(reactDOM);
 
-        const ul = React.createElement('ul', {id: 'list', className: 'list', style: {color: 'red'}}, 
-            React.createElement('li', {style: 'color: red'}, 'Monday'),
-            React.createElement('li', null, 'Tuesday'),
-            React.createElement('li', null, 'Wednesday'),
-            React.createElement('li', null, 'Thursday'),
-            React.createElement('li', null, 'Friday'),
-            React.createElement('li', null, 'Saturday'),
-            React.createElement('li', null, 'Sunday')
-        );
+        // const ul = React.createElement('ul', {id: 'list', className: 'list', style: {color: 'red'}},
+        //     React.createElement('li', {style: 'color: red'}, 'Monday'),
+        //     React.createElement('li', null, 'Tuesday'),
+        //     React.createElement('li', null, 'Wednesday'),
+        //     React.createElement('li', null, 'Thursday'),
+        //     React.createElement('li', null, 'Friday'),
+        //     React.createElement('li', null, 'Saturday'),
+        //     React.createElement('li', null, 'Sunday')
+        // );
+
+        // console.log(ul);
+
+        // const newElement = React.createElement(
+        //     'div',
+        //     {className: 'post-items'},
+        //     React.createElement('h2', {title: 'Học ReactJS', style: {color: 'red'}}, 'Học ReactJS'),
+        //     React.createElement('p', null, 'ReactJS là một thư viện JavaScript được sử dụng để xây dựng giao diện người dùng.'),
+        // );
+
+        // const container = document.getElementById('root');
+        // // ReactDOM.render(newElement, root);
+        // const root = ReactDOM.createRoot(container)
+        // root.render(newElement)
+    </script>
+
+    <!-- <script type="text/babel">
+        const Course = [
+            {
+                name: "HTML, CSS",
+                cost: 100
+            },
+            {
+                name: "Python",
+                cost: 200
+            },
+            {
+                name: "C++",
+                cost: 150
+            },
+            {
+                name: "Java",
+                cost: 150
+            }
+        ]
+
+        const container =
+            <ul>
+                {
+                    Course.map(course=>{
+                        return <li data-cost = {course.cost}>{course.name} - {course.cost}</li>
+                    })
+                }
+            </ul>
+
+        ReactDOM.render(container, document.getElementById('root'))
+    </script> -->
+
+
+    <script type="text/babel">
+
+        const Courses = [
+            {
+                title: "HTML, CSS",
+                desc: "Học HTML, CSS cơ bản",
+                views: 1203,
+                published: "Một ngày trước"
+            },
+            {
+                title: "Python, C++ - Tối ưu hóa",
+                desc: "Bạn có kiến thức ngôn ngữ lập trình nào?",
+                views: 903,
+                published: "Hai ngày trước"
+            },
+            {
+                title: "Java, C# - Lập trình hướng đối tượng",
+                desc: "Lập trình hướng đối tượng",
+                views: 203,
+                published: "Một tuần trước"
+            },
+            {
+                title: "ReactJS, VueJS - Framework JavaScript",
+                desc: "Học ReactJS, VueJS",
+                views: 657,
+                published: "Một tháng trước"
+            },
+            {
+                title: "NodeJS, ExpressJS - Backend",
+                desc: "Học NodeJS, ExpressJS",
+                views: 6203,
+                published: "Một năm trước"
+            }
+        ]
+
+        function PostItem({course}) {
+            console.log(course)
+            return (
+                <div onClick={()=>alert(course.title)} className="post-item">
+                    <h2 className="post-title">{course.title}</h2>
+                    <p className="post-desc">{course.desc}</p>
+                    <p className="post-published">{course.published} - {course.views} Lượt xem</p>
+                </div>
+            )
+        }
+
+        function App() {
+            return (
+                <div className="post-list">
+                    {
+                        Courses.map(course => {
+                            return <PostItem course = {course} />
+                        })
+                    }
+                </div>
+            )
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'))
+
     </script>
 </body>
+
 </html>
