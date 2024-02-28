@@ -1,0 +1,30 @@
+.Toggle{
+    width: 120px;
+    height: 50px;
+    background-color: #ccc;
+    border-radius: 25px;
+    position: relative;
+
+}
+
+.Toggle.Switch{
+    background-color: rgb(73, 73, 254);
+}
+
+.Spin{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.Spin.Switch{
+    left: 75px;
+    background-color: chartreuse;
+}
