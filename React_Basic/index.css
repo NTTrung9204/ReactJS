@@ -14,3 +14,30 @@
     color: green;
     margin-bottom: 10px;
 }
+
+.href-link{
+    text-decoration: none;
+    color: black;
+    padding: 10px 20px;
+    background-color: #e1e1e1;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.href-link:hover{
+    background-color: aqua;
+}
+
+.button-Tag{
+    padding: 5px 10px;
+    background-color: #c3c355;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.button-Tag:hover{
+    background-color: firebrick
+}
+

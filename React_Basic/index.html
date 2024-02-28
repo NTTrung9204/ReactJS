@@ -74,7 +74,7 @@
     </script> -->
 
 
-    <script type="text/babel">
+    <!-- <script type="text/babel">
 
         const Courses = [
             {
@@ -134,6 +134,54 @@
 
         ReactDOM.render(<App />, document.getElementById('root'))
 
+    </script> -->
+
+    <script type="text/babel">
+        // const Form = {
+        //     Input(){
+        //         return <input />
+        //     },
+        //     CheckBox(){
+        //         return <input type="CheckBox"/>
+        //     }
+        // }
+
+        // const Component = Form['CheckBox']
+
+        function Button({title, href, onClick}){
+            let Component = 'button'
+
+            const props = {
+                className: 'button-Tag'
+            }
+
+            if(href){
+                Component = 'a'
+                props.href = href
+                props.className = 'href-link'
+            }
+            if(onClick){
+                props.onClick = onClick
+            }
+            
+            return <Component {...props}>{title}</Component>
+        }
+
+        function App() {
+            return (
+                <div className="post-list">
+                    {
+                        <Button 
+                            title="Hello"
+                            href="https://www.youtube.com/"
+                            onClick = {() => console.log(Math.random())}
+                        />
+                    }    
+                </div>
+            )
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'))
     </script>
 </body>
 
