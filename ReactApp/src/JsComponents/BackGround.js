@@ -1,11 +1,12 @@
 import '../Css/Static.css';
-import './TodoApp.js';
-import TodoApp from './TodoApp.js';
+import './TicTacToe/TicTacToe.js'
+import TicTacToe from './TicTacToe/TicTacToe.js';
+
 
 function BackGround() {
   return (
     <div className="backGround">
-        <TodoApp />
+        <TicTacToe />
     </div>
     );
 }
