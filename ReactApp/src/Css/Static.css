@@ -201,8 +201,28 @@
     width: 65%;
     height: 65%;
     border-radius: 50%;
-    border: 10px solid #fff;
+    border: 15px solid #fff;
     box-shadow: 0 0 20px 4px #ff00eab4;
+}
+
+.ResetGame{
+    all: unset;
+    position: absolute;
+    padding: 10px 20px;
+    background: #8D4AE7;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+    bottom: -70px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: all 0.3s;
+    box-shadow: 0 0 10px 2px #ff00eab4;
+}
+
+.ResetGame:hover{
+    background: #6f00ff;
 }
 
 
