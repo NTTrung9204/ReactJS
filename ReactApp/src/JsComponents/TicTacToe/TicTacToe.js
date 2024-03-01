@@ -26,7 +26,7 @@ function TicTacToe() {
             const index = event.target.getAttribute('Square_id')
             const label = isTurnX ? 'Cross' : 'Circle';
             const newSquares = squares.map((square, i) => i === parseInt(index) ? label : square)
-            
+
             setTimeout(()=>{
                 const winner = checkWinner(newSquares);
                 if(winner) {
@@ -45,7 +45,6 @@ function TicTacToe() {
     }
 
     function resetGame(){
-        console.log('reset')
         setSquares(Array(9).fill(null));
         setIsTurnX(true);
     }
