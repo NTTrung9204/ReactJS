@@ -1,13 +1,22 @@
-import '../Css/Static.css';
-import './TicTacToe/TicTacToe.js'
-import TicTacToe from './TicTacToe/TicTacToe.js';
+// import '../Css/Static.css';
+import './Content/Content.js';
 
+import { useState } from 'react';
+import Content from './Content/Content.js';
 
 function BackGround() {
-  return (
-    <div className="backGround">
-        <TicTacToe />
-    </div>
+    const [show, setShow] = useState(true);
+
+    function handleClick() {
+        setShow(!show);
+    }
+
+    return (
+        <div style={{padding: 18}}>
+            <button onClick={handleClick}>Click Me!</button>
+            
+            {show || <Content />}
+        </div>
     );
 }
 
