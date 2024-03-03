@@ -28,3 +28,33 @@
     left: 75px;
     background-color: chartreuse;
 }
+
+.squareTimer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 2px solid blue;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.squareTimer-cell{
+    content: '';
+    position: absolute;
+    width: 100%;
+    background-color: #4359fc;
+    bottom: 0;
+    transition: all 0.3s;
+}
+
+.squareTimer span{
+    line-height: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
