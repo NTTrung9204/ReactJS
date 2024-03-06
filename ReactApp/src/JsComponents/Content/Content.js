@@ -68,7 +68,7 @@ function Content() {
     return (
         <div>
             <div className="squareTimer">
-                <div style={{height: `${(1 - time/limitTime)*100}%`}} 
+                <div style={{height: `${(1 - time/limitTime)*100}%`, backgroundColor: `${!time ? 'yellow' : '#4359fcab'}`}} 
                 className="squareTimer-cell"></div>
                 <span>{time}</span>
             </div>

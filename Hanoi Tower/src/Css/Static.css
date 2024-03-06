@@ -1,0 +1,75 @@
+.backGround{
+    background: linear-gradient(-90deg, lightblue, blue);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.HanoiTower{
+    width: 70%;
+    height: 70%;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 0 auto;
+    box-shadow: 0 0 15px 2px black;
+    position: relative;
+}
+
+.container_Tower{
+    width: 100%;
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Tower{
+    width: 250px;
+    height: 250px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.Tower::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    border-radius: 20px;
+    border: 2px solid white;
+    transform: translateX(-50%);
+    bottom: 0px;
+    left: 50%;
+    z-index: 1;
+    background-color: blueviolet;
+}
+
+.Tower::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    border-radius: 20px;
+    border: 2px solid white;
+    transform: translateX(-50%);
+    bottom: 0px;
+    left: 50%;
+    background-color: blueviolet;
+}
+
+.Tower_cell{
+    height: 20px;
+    position: absolute;
+    background-color: brown;
+    border-radius: 20px;
+    border: 2px solid white;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 2;
+}

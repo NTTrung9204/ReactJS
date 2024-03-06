@@ -45,7 +45,7 @@
     content: '';
     position: absolute;
     width: 100%;
-    background-color: #4359fc;
+    background-color: #4359fcab;
     bottom: 0;
     transition: all 0.3s;
 }
